@@ -1,6 +1,3 @@
-// Constructing the Array
-// https://codeforces.com/problemset/problem/1353/D
-
 #include <bits/stdc++.h>
 using namespace std;
 typedef pair <int, int> PII;
@@ -44,3 +41,6 @@ int main() {
     }
     return 0;
 }
+
+// Constructing the Array
+// https://codeforces.com/problemset/problem/1353/D

@@ -1,6 +1,3 @@
-// Special Permutation
-// https://codeforces.com/problemset/problem/1352/G
-
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -23,3 +20,6 @@ int main() {
     }
     return 0;
 }
+
+// Special Permutation
+// https://codeforces.com/problemset/problem/1352/G
