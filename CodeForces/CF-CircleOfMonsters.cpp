@@ -1,34 +1,32 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define forn(i, n) for (int i = 0; i < int(n); ++i)
+#define forn(i, n) for (int i = 0; i < int(n); i ++ )
+typedef long long LL;
 
-typedef long long li;
-
-const int N = 300 * 1000 + 13;
-
+const int N = 3e5 + 10;
 int n;
-li a[N], b[N];
+LL a[N], b[N];
 
 void solve() {
 	scanf("%d", &n);
 	forn(i, n) scanf("%lld%lld", &a[i], &b[i]);
-	
-	li ans = 0, mn = 1e18;
+	LL ans = 0, mn = 1e18;
 	forn(i, n) {
-		int ni = (i + 1) % n;
-		li val = min(a[ni], b[i]);
-		ans += a[ni] - val;
-		mn = min(mn, val);
-        cout << "ans : " << ans << " " << "mn : " << mn << endl;
+		int next_i = (i + 1) % n;
+		LL t = a[next_i] - b[i];
+		if(t >= 0) ans += t;
+		mn = min(mn, a[next_i] - b[i] >= 0 ? b[i] : a[next_i]);
 	}
-	ans += mn;
-	printf("%lld\n", ans);
+	printf("%lld\n", ans + mn);
 }
 
 int main() {
 	int T;
 	scanf("%d", &T);
-	forn(i, T)
-		solve();
+	while(T -- ) solve();
+	return 0;
 }
+
+// Circle of Monsters
+// https://codeforces.com/problemset/problem/1334/C
