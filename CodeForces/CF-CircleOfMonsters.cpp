@@ -16,7 +16,7 @@ void solve() {
 		int next_i = (i + 1) % n;
 		LL t = a[next_i] - b[i];
 		if(t >= 0) ans += t;
-		mn = min(mn, a[next_i] - b[i] >= 0 ? b[i] : a[next_i]);
+		mn = min(mn, a[next_i] - b[i] < 0 ? a[next_i] : b[i]);
 	}
 	printf("%lld\n", ans + mn);
 }
