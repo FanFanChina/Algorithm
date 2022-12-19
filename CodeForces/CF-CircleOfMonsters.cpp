@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define forn(i, n) for (int i = 0; i < int(n); i ++ )
+#define forn(i, n) for(int i = 0; i < int(n); i ++ )
 typedef long long LL;
 
 const int N = 3e5 + 10;
@@ -16,6 +16,7 @@ void solve() {
 		int next_i = (i + 1) % n;
 		LL t = a[next_i] - b[i];
 		if(t >= 0) ans += t;
+		// T + a[next_i] - (a[next_i] - b[i])
 		mn = min(mn, a[next_i] - b[i] < 0 ? a[next_i] : b[i]);
 	}
 	printf("%lld\n", ans + mn);
