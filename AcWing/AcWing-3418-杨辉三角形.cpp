@@ -14,7 +14,7 @@ LL C(int n, int m) {
 }
 
 bool check(int k) {
-    int l = 2 * k, r = max(n, l); // n 一定会在n行及n行之前出现
+    int l = 2 * k, r = max(n, l);  // n 一定会在n行及n行之前出现
     while(l < r) {
         int mid = l + r >> 1;
         if(C(mid, k) >= n) r = mid;
@@ -26,7 +26,7 @@ bool check(int k) {
 }
 
 int main() {
-    ios_base::sync_with_stdio(false);cin.tie(nullptr);
+    ios::sync_with_stdio(false);cin.tie(nullptr);
     cin >> n;
     for(int i = 16; ; i --) 
         if(check(i)) break;
