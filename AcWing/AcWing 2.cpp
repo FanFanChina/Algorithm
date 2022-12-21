@@ -5,7 +5,7 @@ using namespace std;
 
 const int N = 1e3 + 10;
 
-int f[N][N]; // 只考虑前i个物品，且体积不超过j
+int f[N][N];    // 只考虑前i个物品，且体积不超过j
 int w[N], v[N];
 int n, m;
 
