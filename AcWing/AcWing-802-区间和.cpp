@@ -9,6 +9,7 @@ int a[N], s[N];
 VI alls;
 vector <PII> add, query;
 
+// 寻找原值在离散化数组中的下标
 int find(int x) {
     int l = -1, r = alls.size();
     while(l + 1 != r) {
